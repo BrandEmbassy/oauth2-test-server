@@ -7,7 +7,7 @@ router.get('/', (req,res) => {  // Successfully reached if can hit this :)
   res.json({
     success: true,
     user: {
-      id: Math.random() * 1000000000000000000,
+      id: String(Math.random() * 1000000000000000000),
       firstName: 'John',
       lastName: 'Doe'
     }
