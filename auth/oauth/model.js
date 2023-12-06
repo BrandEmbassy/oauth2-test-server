@@ -38,7 +38,11 @@ module.exports = {
       clientId: clientId,
       clientSecret: clientSecret,
       grants: ['authorization_code', 'refresh_token'],
-      redirectUris: ['https://localhost:3000', 'http://localhost:3000/client/app'],
+      redirectUris: [
+        'https://localhost:3000',
+        'http://localhost:3000/client/app',
+        'https://nice-oauth2-test-server-f98a27bf7473.herokuapp.com/client/app'
+      ],
     }
     return new Promise(resolve => {
       resolve(db.client)
