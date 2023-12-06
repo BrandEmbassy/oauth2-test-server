@@ -18,7 +18,11 @@ router.post('/authorize', (req,res,next) => {
   DebugControl.log.flow('Initial User Authentication')
   const {username, password} = req.body
   if(username === 'username' && password === 'password') {
-    req.body.user = {user: 1}
+    req.body.user = {
+      id: String(Math.random() * 1000000000000000000),
+      firstName: 'John',
+      lastName: 'Doe',
+    };
     return next()
   }
   const params = [ // Send params back down

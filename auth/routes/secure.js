@@ -6,18 +6,10 @@ router.get('/', (req,res) => {  // Successfully reached if can hit this :)
   DebugControl.log.flow('Secure');
   DebugControl.log.variable({name: 'res.locals.oauth.token', value: res.locals.oauth.token});
 
-  const body = {
+  res.json({
     success: true,
-    user: {
-      id: String(Math.random() * 1000000000000000000),
-      firstName: 'John',
-      lastName: 'Doe'
-    }
-  };
-
-  DebugControl.log.variable({name: 'user.id', value: body.user.id});
-
-  res.json(body)
+    user: res.locals.oauth.token.user,
+  });
 })
 
 module.exports = router
