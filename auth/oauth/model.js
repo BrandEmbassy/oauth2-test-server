@@ -38,7 +38,7 @@ module.exports = {
       clientId: clientId,
       clientSecret: clientSecret,
       grants: ['authorization_code', 'refresh_token'],
-      redirectUris: ['http://localhost:3030/client/app'],
+      redirectUris: ['https://localhost:3000'],
     }
     return new Promise(resolve => {
       resolve(db.client)
@@ -109,7 +109,7 @@ module.exports = {
     return new Promise(resolve => resolve(true))
   },
   generateAuthorizationCode: (client, user, scope) => {
-    /* 
+    /*
     For this to work, you are going have to hack this a little bit:
     1. navigate to the node_modules folder
     2. find the oauth_server folder. (node_modules/express-oauth-server/node_modules/oauth2-server)
