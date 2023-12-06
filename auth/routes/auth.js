@@ -49,7 +49,7 @@ router.post('/token', (req,res,next) => {
   next()
 },oauthServer.token({
   requireClientAuthentication: { // whether client needs to provide client_secret
-    // 'authorization_code': false,
+    'authorization_code': false,
   },
 }))  // Sends back token
 
