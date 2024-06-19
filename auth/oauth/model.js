@@ -41,7 +41,8 @@ module.exports = {
       redirectUris: [
         'https://localhost:3000',
         'http://localhost:3000/client/app',
-        'https://nice-oauth2-test-server-f98a27bf7473.herokuapp.com/client/app'
+        'https://nice-oauth2-test-server-f98a27bf7473.herokuapp.com/client/app',
+        'http://localhost:5173'
       ],
     }
     return new Promise(resolve => {
