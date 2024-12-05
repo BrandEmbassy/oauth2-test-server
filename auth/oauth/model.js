@@ -43,7 +43,9 @@ module.exports = {
         'http://localhost:3000',
         'http://localhost:3000/client/app',
         'https://localhost:3003',
+        'https://localhost:3003/oauth.html',
         'http://localhost:3003',
+        'http://localhost:3003/oauth.html',
         'https://nice-oauth2-test-server-f98a27bf7473.herokuapp.com/client/app',
         'http://localhost:5173',
         'https://localhost:5173'
