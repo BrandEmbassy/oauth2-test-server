@@ -38,18 +38,7 @@ module.exports = {
       clientId: clientId,
       clientSecret: clientSecret,
       grants: ['authorization_code', 'refresh_token'],
-      redirectUris: [
-        'https://localhost:3000',
-        'http://localhost:3000',
-        'http://localhost:3000/client/app',
-        'https://localhost:3003',
-        'https://localhost:3003/oauth.html',
-        'http://localhost:3003',
-        'http://localhost:3003/oauth.html',
-        'https://nice-oauth2-test-server-f98a27bf7473.herokuapp.com/client/app',
-        'http://localhost:5173',
-        'https://localhost:5173'
-      ],
+      redirectUris: [''],
     }
     return new Promise(resolve => {
       resolve(db.client)
@@ -172,6 +161,9 @@ module.exports = {
     })
     const userHasAccess = true  // return true if this user / client combo has access to this resource
     return new Promise(resolve => resolve(userHasAccess))
+  },
+  validateRedirectUri: (redirectUri, client) => {
+    return true;
   }
 }
 
